@@ -42,7 +42,7 @@ if (isset($_SERVER['SERVER_NAME'])) {
     $storage = new \OAuth\Common\Storage\Memory();
     $flickr->setOauthStorage($storage);
 
-    $url = $flickr->getAuthUrl('write');
+    $url = $flickr->getAuthUrl('delete');
     echo "Go to $url\nEnter access code: ";
     $code = fgets(STDIN);
     $verifier = preg_replace('/[^0-9]/', '', $code);
